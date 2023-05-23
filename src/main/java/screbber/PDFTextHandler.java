@@ -31,6 +31,17 @@ public class PDFTextHandler {
         }
     }
 
+    private String formatName(String name) {
+        if (!name.isEmpty()) {
+            name = name.substring(0, 1).toUpperCase() + name.substring(1);
+        }
+
+        if (name.endsWith(".")) {
+            name = name.substring(0, name.length() - 1);
+        }
+        return name;
+    }
+
     private List<Definition> mergeMapsOfNamesAndDefinitions(Map<Integer, List<String>> namesDefinitions,
                                                             Map<Integer, List<String>> infoDefinitions) {
 
@@ -41,7 +52,7 @@ public class PDFTextHandler {
                 List<String> namesFromList = entry.getValue();
                 List<String> infoListFromPage = infoDefinitions.get(page);
                 for (int i = 0; i < namesFromList.size(); i++) {
-                    Definition definition = new Definition(namesFromList.get(i), infoListFromPage.get(i), 1);
+                    Definition definition = new Definition(formatName(namesFromList.get(i)), infoListFromPage.get(i), 1);
                     definitionList.add(definition);
                     System.out.println(definition.getName() + " : " + definition.getInfo());
                     System.out.println(SEPARATOR);
