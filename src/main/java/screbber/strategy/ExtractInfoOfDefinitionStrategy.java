@@ -33,17 +33,6 @@ public class ExtractInfoOfDefinitionStrategy extends SimpleTextExtractionStrateg
     @Override
     public void renderText(TextRenderInfo renderInfo) {
         System.out.println(renderInfo.getText() + ": ");
-//        for (String[] strings : renderInfo.getFont().getFamilyFontName()) {
-//            for (String font : strings) {
-//                 System.out.print(font + ", ");
-//            }
-//        }
-
-        // System.out.print(renderInfo.getFont().toString());
-        // System.out.print(renderInfo.getFillColor() == null ? "null" : renderInfo.getFillColor().getRGB() + " ");
-        // System.out.println(BaseColor.BLACK.getRGB() + " " + BaseColor.BLUE.getRGB());
-
-        // System.out.println();
         System.out.println("Стиль : " + renderInfo.getFont().getPostscriptFontName());
         System.out.println("-------------------------------------------------------");
         boolean isItalic = isDefinition(renderInfo);
