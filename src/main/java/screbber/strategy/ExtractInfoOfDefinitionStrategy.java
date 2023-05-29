@@ -17,7 +17,6 @@ public class ExtractInfoOfDefinitionStrategy extends SimpleTextExtractionStrateg
         if (renderInfo.getFillColor().getRGB() != BaseColor.BLACK.getRGB()) {
             return false;
         }
-
 //        boolean isItalic = (renderInfo.getFont().toString().contains("CMapAwareDocumentFont@2471cca7")
 //        || renderInfo.getFont().toString().contains("CMapAwareDocumentFont@47d384ee"));
 

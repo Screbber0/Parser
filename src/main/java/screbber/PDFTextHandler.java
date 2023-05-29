@@ -44,7 +44,6 @@ public class PDFTextHandler {
 
     private List<Definition> mergeMapsOfNamesAndDefinitions(Map<Integer, List<String>> namesDefinitions,
                                                             Map<Integer, List<String>> infoDefinitions) {
-
         List<Definition> definitionList = new ArrayList<>();
         for (Map.Entry<Integer, List<String>> entry : namesDefinitions.entrySet()) {
             int page = entry.getKey();
